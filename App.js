@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
 import { enableScreens } from 'react-native-screens';
 import Navigator from './src/components/Navigator';
 
@@ -18,6 +18,6 @@ export default function App() {
   return fontLoaded ? (
     <Navigator />
   ) : (
-    <AppLoading startAsync={fetchFonts} onFinish={() => setFontLoaded(true)} />
+    <AppLoading startAsync={fetchFonts} onFinish={() => setFontLoaded(true)} onError={console.warn} />
   );
 }
