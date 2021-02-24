@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Abel-Regular',
-    fontSize: 21,//taille texte d'un titre de bloc
+    fontSize: 20,//taille texte d'un titre de bloc
     color: '#fff',
     textAlign: 'center',
   },

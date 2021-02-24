@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 28,
+    fontSize: 20,
     marginTop: 2,
   },
   icon: {
