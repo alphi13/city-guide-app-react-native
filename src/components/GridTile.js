@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   title: {
-    fontFamily: 'nunito-light',
-    fontSize: 21,
+    fontFamily: 'Abel-Regular',
+    fontSize: 21,//taille texte d'un titre de bloc
     color: '#fff',
     textAlign: 'center',
   },

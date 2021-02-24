@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const AppInfo = () => (
+const InfoUtil = () => (
   <ScrollView>
     <View>
       <Text style={styles.container}>
@@ -75,7 +75,7 @@ const AppInfo = () => (
   </ScrollView>
 );
 
-AppInfo.navigationOptions = (headerTitle) => (headerTitle: 'Hakkında');
+InfoUtil.navigationOptions = (headerTitle) => (headerTitle: 'Hakkında');
 
 const styles = StyleSheet.create({
   container: {
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AppInfo;
+export default InfoUtil;

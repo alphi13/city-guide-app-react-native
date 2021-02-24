@@ -35,7 +35,7 @@ const Locations = ({ navigation }) => {
       ) : (
         <View style={[styles.container]}>
           <ActivityIndicator size='large' color='#0000ff' />
-          <Text style={[styles.text]}>Yükleniyor...</Text>
+          <Text style={[styles.text]}>Chargement...</Text>
         </View>
       )}
     </>
@@ -46,10 +46,11 @@ Locations.navigationOptions = () => ({
   headerTitle: 'Les Pennes Mirabeau',
   headerLeft: () => (
     <View style={{ flexDirection: 'row' }}>
-      <Image source={require('../assets/icon-s.png')} style={styles.icon} />
+
     </View>
   ),
 });
+//<Image source={require('../assets/icon-s.png')} style={styles.icon} />
 
 const styles = StyleSheet.create({
   container: {
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 28,
     marginTop: 2,
   },
   icon: {

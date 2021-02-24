@@ -13,21 +13,23 @@ import PlaceDetails from '../screens/PlaceDetails';
 import Search from '../screens/Search';
 import SearchResults from '../screens/SearchResults';
 import AppInfo from '../screens/AppInfo';
+import InfoUtil from '../screens/InfoUtil';
 // import FavoritesScreen from '../screens/FavoritesScreen'
 
 // Default stack options
 const defaultStackNavOptions = {
   headerStyle: {
-    backgroundColor: Platform.OS === 'android' ? '#2a1a73' : '',
-    height: 50,
+    backgroundColor: Platform.OS === 'android' ? '#ffffff' : '',
+    height: 60,
   },
   headerTitleStyle: {
-    fontFamily: 'nunito-bold',
+    fontFamily: 'Abel-Regular',
+    fontSize: 20,//taille texte d'un titre global
   },
   headerBackTitleStyle: {
-    fontFamily: 'nunito-light',
+    fontFamily: 'Abel-Regular',
   },
-  headerTintColor: Platform.OS === 'android' ? 'white' : '#2a1a73',
+  headerTintColor: Platform.OS === 'android' ? '#2D58DB' : '#2D58DB',
 };
 
 // Main navigator
@@ -54,6 +56,9 @@ const Navigator = createStackNavigator(
     Info: {
       screen: AppInfo,
     },
+    InfoUtil: {
+      screen: InfoUtil,
+    },
   },
   {
     defaultNavigationOptions: defaultStackNavOptions,
@@ -63,7 +68,7 @@ const Navigator = createStackNavigator(
 // Search navigator
 const SearchNavigator = createStackNavigator(
   {
-    Search,
+    'Recherche': Search,
   },
   {
     defaultNavigationOptions: defaultStackNavOptions,
@@ -73,7 +78,17 @@ const SearchNavigator = createStackNavigator(
 // Info navigator
 const InfoNavigator = createStackNavigator(
   {
-    Info: AppInfo,
+    'Crédits': AppInfo,
+  },
+  {
+    defaultNavigationOptions: defaultStackNavOptions,
+  }
+);
+
+// Info navigator
+const InfoUtilNavigator = createStackNavigator(
+  {
+    'Infos Pratiques': InfoUtil,
   },
   {
     defaultNavigationOptions: defaultStackNavOptions,
@@ -88,7 +103,16 @@ const tabScreenConfig = {
       tabBarIcon: (tabInfo) => (
         <Ionicons name='ios-home' size={25} color={tabInfo.tintColor} />
       ),
-      tabBarColor: '#2a1a73',
+      tabBarColor: '#2D58DB',
+    },
+  },
+  InfoUtil: {
+    screen: InfoUtilNavigator,
+    navigationOptions: {
+      tabBarIcon: (tabInfo) => (
+        <Ionicons name='at-circle-outline' size={25} color={tabInfo.tintColor} />
+      ),
+      tabBarColor: '#2D58DB',
     },
   },
   Search: {
@@ -97,7 +121,7 @@ const tabScreenConfig = {
       tabBarIcon: (tabInfo) => (
         <Ionicons name='ios-search' size={25} color={tabInfo.tintColor} />
       ),
-      tabBarColor: '#2a1a73',
+      tabBarColor: '#2D58DB',
     },
   },
   Info: {
@@ -110,7 +134,7 @@ const tabScreenConfig = {
           color={tabInfo.tintColor}
         />
       ),
-      tabBarColor: '#2a1a73',
+      tabBarColor: '#2D58DB',
     },
   },
 };
@@ -123,7 +147,7 @@ const PlacesFavTabNavigator =
         shifting: true,
         labeled: false,
         barStyle: {
-          backgroundColor: '#2a1a73',
+          backgroundColor: '#2D58DB',
         },
       })
     : createBottomTabNavigator(tabScreenConfig, {

@@ -10,6 +10,7 @@ const fetchFonts = () =>
   Font.loadAsync({
     'nunito-bold': require('./src/assets/fonts/Nunito-Bold.ttf'),
     'nunito-light': require('./src/assets/fonts/Nunito-Light.ttf'),
+    'Abel-Regular': require('./src/assets/fonts/Abel-Regular.ttf'),
   });
 
 export default function App() {
